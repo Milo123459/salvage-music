@@ -24,7 +24,7 @@ class Queue extends Map {
         guild: msg.guild,
         text: msg.channel,
         player,
-        thisArg: this.thisArg
+        thisArg: this.thisArg,
       });
       dispatcher.queue.push(track);
       this.set(msg.guild.id, dispatcher);

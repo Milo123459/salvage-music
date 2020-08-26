@@ -2,6 +2,7 @@ const { Client, Message } = require("discord.js");
 const Shoukaku = require("shoukaku");
 const cache = require("./Cache");
 /**
+ * @description A node for connecting to lavalink
  * @typedef SalvageNode
  * @type {Object}
  * @property {String} auth The authorization (password)
@@ -10,6 +11,7 @@ const cache = require("./Cache");
  * @property {String} name The name of the node
  */
 /**
+ * @description An object containing important messages for a music bot.
  * @typedef SalvageMessages
  * @type {Object}
  * @property {Function} newSong The message to send when a new song is playing
@@ -17,6 +19,7 @@ const cache = require("./Cache");
  */
 class SalvageMusic {
   /**
+   * @description The main constructor / class for salvage-music
    * @param {Client} client Your discord bot client
    * @param {Array<SalvageNode>} nodes Your lavalink nodes
    * @param {SalvageMessages} messages The messages for your bot
@@ -37,6 +40,7 @@ class SalvageMusic {
    * @param {String} query The query
    * @param {'youtube'|'soundcloud'} service The service, either youtube or soundcloud
    * @param {Message} message A message instance
+   * @description This will search and play a song if it finds one, it accepts a url and a query. If it works, it'll return an object containing data on what was played, if it was a playlist etc.
    */
   async searchAndPlay(node, query, service, message) {
     const searched = await node.rest.resolve(
@@ -57,9 +61,13 @@ class SalvageMusic {
       songInfo: indexTrack.info,
       playlistName,
       tracks,
-      isPlaylist
+      isPlaylist,
     };
   }
+  /**
+   * @description Will return true if it is a valid url, false if it isn't. This is a utility, recommended you don't use it.
+   * @param {String} string A string to test
+   */
   checkURL(string) {
     try {
       new URL(string);
@@ -69,7 +77,7 @@ class SalvageMusic {
     }
   }
   /**
-   *
+   * @description Will get the current playing song and the queue for the guild if it exists, if it doesn't it will return false.
    * @param {Message} message The message instance
    */
   getQueue(message) {
@@ -82,40 +90,51 @@ class SalvageMusic {
   }
   /**
    * @param {Message} message The message instance
+   * @description Will return true if success, false if failed. Will skip the current playing song
    */
   async skip(message) {
-    if(!this.getQueue(message)) return false;
+    if (!this.getQueue(message)) return false;
     await this.queue.get(message.guild.id).player.stopTrack();
+    return true;
   }
   /**
    * @param {Message} message The message instance
    * @param {Number} amount The amount to set the volume to
+   * @description Will return true if success, false if failed. Will set the volume of the bot in a guild.
    */
   async setVolume(message, amount) {
-    if(!this.getQueue(message)) return false;
+    if (!this.getQueue(message)) return false;
     await this.queue.get(message.guild.id).player.setVolume(amount);
+    return true;
   }
   /**
    * @param {Message} message The message instance
+   * @description Will return true if success, false if failed. Will make the bot pause the music if it is currently playing.
    */
   async pause(message) {
-    if(!this.getQueue(message)) return false;
+    if (!this.getQueue(message)) return false;
+    if (this.queue.get(message.guild.id).player.paused == true) return false;
     this.queue.get(message.guild.id).player.setPaused(true);
   }
   /**
    * @param {Message} message The message instance
+   * @description Will return true if success, false if failed. Will make the bot resume the music if it is currently paused.
    */
   async resume(message) {
-    if(!this.getQueue(message)) return false;
+    if (!this.getQueue(message)) return false;
+    if (this.queue.get(message.guild.id).player.paused == false) return false;
     this.queue.get(message.guild.id).player.setPaused(false);
+    return true;
   }
   /**
-   * @param {Message} message
+   * @param {Message} message The message instance
+   * @description Will return true if success, false if failed. Will make the bot leave the voice channel and delete the queue for that guild.
    */
   async stop(message) {
-    if(!this.getQueue(message)) return false;
+    if (!this.getQueue(message)) return false;
     await this.queue.get(message.guild.id).player.disconnect();
     this.queue.delete(message.guild.id);
+    return true;
   }
-};
+}
 module.exports = SalvageMusic;

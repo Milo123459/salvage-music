@@ -4,7 +4,7 @@
   "description": "",
   "main": "src/index.js",
   "scripts": {
-    "docs": "node_modules/.bin/jsdoc --configure .jsdoc.json --verbose && npm run fixTheDocs",
+    "docs": "prettier --write . && npx jsdoc --configure .jsdoc.json --verbose && npm run fixTheDocs && prettier --write .",
     "fixTheDocs": "node fixTheDocs.js"
   },
   "keywords": [],

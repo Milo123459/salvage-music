@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Home - Documentation</title>
 
     <script src="scripts/prettify/prettify.js"></script>
@@ -10,107 +10,187 @@
     <!--[if lt IE 9]>
       <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-    <link type="text/css" rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
-    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
-</head>
-<body>
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"
+    />
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="styles/prettify-tomorrow.css"
+    />
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css" />
+  </head>
+  <body>
+    <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+    <label for="nav-trigger" class="navicon-button x">
+      <div class="navicon"></div>
+    </label>
 
-<input type="checkbox" id="nav-trigger" class="nav-trigger" />
-<label for="nav-trigger" class="navicon-button x">
-  <div class="navicon"></div>
-</label>
+    <label for="nav-trigger" class="overlay"></label>
 
-<label for="nav-trigger" class="overlay"></label>
+    <nav>
+      <li class="nav-link nav-home-link"><a href="index.html">Home</a></li>
+      <li class="nav-heading">Classes</li>
+      <li class="nav-heading">
+        <span class="nav-item-type type-class">C</span
+        ><span class="nav-item-name"
+          ><a href="SalvageMusic.html">SalvageMusic</a></span
+        >
+      </li>
+      <li class="nav-item">
+        <span class="nav-item-type type-function">F</span
+        ><span class="nav-item-name"
+          ><a href="SalvageMusic.html#checkURL">checkURL</a></span
+        >
+      </li>
+      <li class="nav-item">
+        <span class="nav-item-type type-function">F</span
+        ><span class="nav-item-name"
+          ><a href="SalvageMusic.html#getQueue">getQueue</a></span
+        >
+      </li>
+      <li class="nav-item">
+        <span class="nav-item-type type-function">F</span
+        ><span class="nav-item-name"
+          ><a href="SalvageMusic.html#pause">pause</a></span
+        >
+      </li>
+      <li class="nav-item">
+        <span class="nav-item-type type-function">F</span
+        ><span class="nav-item-name"
+          ><a href="SalvageMusic.html#resume">resume</a></span
+        >
+      </li>
+      <li class="nav-item">
+        <span class="nav-item-type type-function">F</span
+        ><span class="nav-item-name"
+          ><a href="SalvageMusic.html#searchAndPlay">searchAndPlay</a></span
+        >
+      </li>
+      <li class="nav-item">
+        <span class="nav-item-type type-function">F</span
+        ><span class="nav-item-name"
+          ><a href="SalvageMusic.html#setVolume">setVolume</a></span
+        >
+      </li>
+      <li class="nav-item">
+        <span class="nav-item-type type-function">F</span
+        ><span class="nav-item-name"
+          ><a href="SalvageMusic.html#skip">skip</a></span
+        >
+      </li>
+      <li class="nav-item">
+        <span class="nav-item-type type-function">F</span
+        ><span class="nav-item-name"
+          ><a href="SalvageMusic.html#stop">stop</a></span
+        >
+      </li>
+      <li class="nav-heading"><a href="global.html">Globals</a></li>
+    </nav>
 
-<nav>
-    <li class="nav-link nav-home-link"><a href="index.html">Home</a></li><li class="nav-heading">Classes</li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="SalvageMusic.html">SalvageMusic</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="SalvageMusic.html#getQueue">getQueue</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="SalvageMusic.html#pause">pause</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="SalvageMusic.html#resume">resume</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="SalvageMusic.html#searchAndPlay">searchAndPlay</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="SalvageMusic.html#setVolume">setVolume</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="SalvageMusic.html#skip">skip</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="SalvageMusic.html#stop">stop</a></span></li><li class="nav-heading"><a href="global.html">Globals</a></li>
-</nav>
-
-<div id="main">
-    
-
-    
-
-
-
-    
-
-
-
-
-
-
-
-
-
-    
-
-
-    <section class="readme">
-        <article><h1>Hey there 👋</h1>
-<p><strong>Have you ever wanted to create a discord music bot? If so, this is the right package for you!</strong></p>
-<p><strong>Features:</strong></p>
-<ul>
-<li>Lightweight 🚀</li>
-<li>Fast ▶️</li>
-<li>Feature-rich ☕</li>
-<li>Queue system built in 📶</li>
-<li>Uses LavaLink 🔥</li>
-<li>Easy to use 🐭</li>
-<li>Maintained 😄</li>
-</ul>
-<p><strong>Credits 😮</strong></p>
-<p>Uses <a href="https://npm.im/shoukaku">Shoukaku</a></p>
-<p>Queue system has been taken and modified from the open source demo bot for shoukaku</p>
-<p>Wrapper coded by <a href="https://youtube.com/SalvageDev">salvage_dev</a></p>
-<p><strong>Examples ⌨️</strong></p>
-<pre class="prettyprint source lang-js"><code>const Salvage = require('salvage-music');
-const Discord = require('discord.js');
+    <div id="main">
+      <section class="readme">
+        <article>
+          <h1>Hey there 👋</h1>
+          <p>
+            <strong
+              >Have you ever wanted to create a discord music bot? If so, this
+              is the right package for you!</strong
+            >
+          </p>
+          <p><strong>Features:</strong></p>
+          <ul>
+            <li>Lightweight 🚀</li>
+            <li>Fast ▶️</li>
+            <li>Feature-rich ☕</li>
+            <li>Queue system built in 📶</li>
+            <li>Uses LavaLink 🔥</li>
+            <li>Easy to use 🐭</li>
+            <li>Maintained 😄</li>
+          </ul>
+          <p><strong>Credits 😮</strong></p>
+          <p>Uses <a href="https://npm.im/shoukaku">Shoukaku</a></p>
+          <p>
+            Queue system has been taken and modified from the open source demo
+            bot for shoukaku
+          </p>
+          <p>
+            Wrapper coded by
+            <a href="https://youtube.com/SalvageDev">salvage_dev</a>
+          </p>
+          <p><strong>Examples ⌨️</strong></p>
+          <pre
+            class="prettyprint source lang-js"
+          ><code>const Salvage = require(&quot;salvage-music&quot;);
+const Discord = require(&quot;discord.js&quot;);
 const client = new Discord.Client();
-const Music = new Salvage(client, [{
-        name: `node1`,
-        auth: `youshallnotpass`,
-        host: `localhost`,
-        port: 6930
-}], { 
-    newSong: ((song) => `Now playing: ${song.title} by ${song.author}`),
-    destroy: () => `I left.`
-}); // The nodes have to be lavalink servers.
-client.on('message', async(message) => {
-    if(message.author.bot ||!message.guild) return;
-    const [cmd, ...args] = message.content.trim().split(/ +/g);
-    switch(cmd.toLowerCase()) {
-        case &quot;play&quot;:
-            if(!args.join(&quot; &quot;)) return;
-            const Node = Music.shoukaku.getNode();
-            const Result = await Music.searchAndPlay(Node, args.join(&quot; &quot;), `youtube`, message);
-            if(!Result) return;
-            message.channel.send(Result.isPlaylist ? `Loaded ${Result.playlistName} playlist which has ${Result.tracks.length} songs` : `Loaded ${Result.songInfo.title} by ${Result.songInfo.author}`);
-            break;
-    }
+const Music = new Salvage(
+  client,
+  [
+    {
+      name: `node1`,
+      auth: `youshallnotpass`,
+      host: `localhost`,
+      port: 6930,
+    },
+  ],
+  {
+    newSong: (song) => `Now playing: ${song.title} by ${song.author}`,
+    destroy: () => `I left.`,
+  }
+); // The nodes have to be lavalink servers.
+client.on(&quot;message&quot;, async (message) => {
+  if (message.author.bot || !message.guild) return;
+  const [cmd, ...args] = message.content.trim().split(/ +/g);
+  switch (cmd.toLowerCase()) {
+    case &quot;play&quot;:
+      if (!args.join(&quot; &quot;)) return;
+      const Node = Music.shoukaku.getNode();
+      const Result = await Music.searchAndPlay(
+        Node,
+        args.join(&quot; &quot;),
+        `youtube`,
+        message
+      );
+      if (!Result) return;
+      message.channel.send(
+        Result.isPlaylist
+          ? `Loaded ${Result.playlistName} playlist which has ${Result.tracks.length} songs`
+          : `Loaded ${Result.songInfo.title} by ${Result.songInfo.author}`
+      );
+      break;
+  }
 });
 client.login(`my token`);
 // A simple play command
 </code></pre>
-<p><strong>There is so much more you can do with this module, keep on reading!</strong></p>
-<p>Hold up, want some nicely formatted documentation? Thought so - click <a href="https://milo123459.github.io/salvage-music/">here</a></p></article>
-    </section>
+          <p>
+            <strong
+              >There is so much more you can do with this module, keep on
+              reading!</strong
+            >
+          </p>
+          <p>
+            Hold up, want some nicely formatted documentation? Thought so -
+            click <a href="https://milo123459.github.io/salvage-music/">here</a>
+          </p>
+        </article>
+      </section>
+    </div>
 
+    <br class="clear" />
 
+    <footer>
+      Generated by
+      <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.5</a> using the Minami
+      theme.
+    </footer>
 
-
-
-
-</div>
-
-<br class="clear">
-
-<footer>
-    Generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.5</a> using the Minami theme.
-</footer>
-
-<script>prettyPrint();</script>
-<script src="scripts/linenumber.js"></script>
-</body>
+    <script>
+      prettyPrint();
+    </script>
+    <script src="scripts/linenumber.js"></script>
+  </body>
 </html>
