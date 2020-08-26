@@ -53,4 +53,4 @@ client.login(`my token`);
 
 **There is so much more you can do with this module, keep on reading!**
 
-Hold up, want some nicely formatted documentation? Thought so - click [here](https://)
+Hold up, want some nicely formatted documentation? Thought so - click [here](https://milo123459.github.io/salvage-music/ 'docs!')

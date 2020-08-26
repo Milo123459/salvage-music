@@ -4,7 +4,7 @@
   "description": "",
   "main": "src/index.js",
   "scripts": {
-    "docs": "node_modules/.bin/jsdoc --configure .jsdoc.json --verbose",
+    "docs": "node_modules/.bin/jsdoc --configure .jsdoc.json --verbose && npm run fixTheDocs",
     "fixTheDocs": "node fixTheDocs.js"
   },
   "keywords": [],
