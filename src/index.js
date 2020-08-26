@@ -67,6 +67,7 @@ class SalvageMusic {
   /**
    * @description Will return true if it is a valid url, false if it isn't. This is a utility, recommended you don't use it.
    * @param {String} string A string to test
+   * @private
    */
   checkURL(string) {
     try {
