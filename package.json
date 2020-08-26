@@ -1,0 +1,21 @@
+{
+  "name": "salvage-music",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "docs": "node_modules/.bin/jsdoc --configure .jsdoc.json --verbose"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "shoukaku": "^1.4.2"
+  },
+  "devDependencies": {
+    "discord.js": "^12.3.1",
+    "jsdoc": "^3.6.5",
+    "minami": "^1.2.3",
+    "nodemon": "^2.0.4"
+  }
+}
